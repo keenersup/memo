@@ -106,7 +106,7 @@ $ git reset --hard HEAD
 ```
 <br />
 
-
+- orphan option 이용하여 master 브랜치 변경하기
 ```bash
 #Check out to a temporary branch:
 git checkout --orphan TEMP_BRANCH
@@ -126,6 +126,27 @@ git branch -m master
 #Finally, force update to our repository:
 git push -f origin master
 ```
+<br />
+
+- git reset 복구
+```bash
+git reflog
+```
+<br />
+
+```
+3f6db14 HEAD@{0}: HEAD~: updating HEAD
+d27924e HEAD@{1}: checkout: moving from d27924e0fe16776f0d0f1ee2933a0334a4787b4c
+57e53a0 HEAD@{2}: modify : bug 수정
+[...]
+```
+
+이런식으로 이전까지했던 작업들 reflog를 확인해 몇번째 HEAD로 이동할지 확인한다.
+만약 HEAD@{1}로 이동할꺼라면
+git reset --hard HEAD@{1}
+
+출처: https://88240.tistory.com/284 [shaking blog]
+
 ---
 <br />
 
