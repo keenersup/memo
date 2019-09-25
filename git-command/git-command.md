@@ -184,7 +184,7 @@ git rebase -i [hash]
 git config --list
 git config --global user.name "keenersup"
 git config --global user.email "keenersup@gmail.com"
-git confit --global credential.helper=cache --timeout=864000
+git config --global credential.helper=cache --timeout=864000
 git config --global core.editor vim
 ```
 ---
